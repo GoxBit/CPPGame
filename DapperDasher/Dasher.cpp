@@ -9,11 +9,11 @@ int main(){
     Texture2D scarfy = LoadTexture("./textures/scarfy.png");  
     Rectangle scarfyRec;
     scarfyRec.width = scarfy.width/6;
-    scarfy.height = scarfy.height;
+    scarfyRec.height = scarfy.height;
     scarfyRec.x = 0;
     scarfyRec.y = 0;
     Vector2 scarfyPos;
-    scarfyPos.x = windowWidth/2 - scarfy.width/2;
+    scarfyPos.x = windowWidth/2 - scarfyRec.width/2;
     scarfyPos.y = windowHeight - scarfyRec.height;
 
     //acceleration due to garvity (pixels/frame)/frame
@@ -52,7 +52,7 @@ int main(){
         //update position
         scarfyPos.y += velocity;
 
-        DrawTextureRec(scarfy, scarfyRec, scarfyPos, BLUE);
+        DrawTextureRec(scarfy, scarfyRec, scarfyPos, WHITE);
         
         EndDrawing();
     }
